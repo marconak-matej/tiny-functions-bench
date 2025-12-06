@@ -14,6 +14,7 @@
 
     <modules>
         <module>is-integer</module>
+        <module>vowels</module>
     </modules>
 
     <properties>

@@ -20,6 +20,17 @@ Benchmarks different approaches to validate if a string represents a valid Java 
 - **Implementations**: 10 different approaches (try-catch, regex, manual parsing, streams, etc.)
 - **Test Cases**: Valid integers, invalid inputs, boundary values, edge cases
 - **Dataset**: 10,000 pre-generated test strings per benchmark
+- **Top Performers**: Manual parsing and charAt methods (6-13 ns/op)
 
 See [is-integer/README.md](is-integer/README.md) for detailed information.
+
+### vowels
+
+Benchmarks different approaches to detect vowels in strings.
+
+- **Implementations**: 13 different approaches (loops, regex, streams, bit operations, etc.)
+- **Test Cases**: Strings with vowels, strings without vowels
+- **Top Performers**: CharArray, ByteMask, and BitSet implementations (1.3-1.5 ns/op for strings with vowels)
+
+See [vowels/README.md](vowels/README.md) for detailed information.
 
