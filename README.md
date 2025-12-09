@@ -34,3 +34,14 @@ Benchmarks different approaches to detect vowels in strings.
 
 See [vowels/README.md](vowels/README.md) for detailed information.
 
+### is-palindrome
+
+Benchmarks different approaches to check if a string is a palindrome.
+
+- **Implementations**: 7 different approaches (two-pointer, StringBuilder, regex, recursive, streams, etc.)
+- **Test Cases**: Short/medium/long palindromes, case sensitivity, whitespace handling, special characters
+- **Dataset**: 10,000 pre-generated test strings across multiple length categories
+- **Expected Top Performers**: Two-pointer and half-string methods for O(1) space efficiency
+
+See [is-palindrome/README.md](is-palindrome/README.md) for detailed information.
+

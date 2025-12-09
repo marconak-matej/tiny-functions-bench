@@ -15,6 +15,7 @@
     <modules>
         <module>is-integer</module>
         <module>vowels</module>
+        <module>is-palindrome</module>
     </modules>
 
     <properties>
