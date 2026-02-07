@@ -27,7 +27,7 @@
 
         <!-- plugins -->
         <spotless-maven-plugin.version>3.2.1</spotless-maven-plugin.version>
-        <maven-compiler-plugin.version>3.14.1</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.15.0</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>3.5.4</maven-surefire-plugin.version>
         <maven-shade-plugin.version>3.6.1</maven-shade-plugin.version>
     </properties>
