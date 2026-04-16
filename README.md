@@ -45,3 +45,17 @@ Benchmarks different approaches to check if a string is a palindrome.
 
 See [is-palindrome/README.md](is-palindrome/README.md) for detailed information.
 
+### concat
+
+Benchmarks different approaches to concatenate strings in Java.
+
+- **Implementations**: 11 different approaches (`+` operator, `String.concat()`, `StringBuilder`, `String.join()`, `CharArray`, `ByteBuffer`, streams, etc.)
+- **Test Cases**: Empty lists, single items, multiple items, special characters, Unicode, long strings
+- **Datasets**: N = 100, 1,000, 10,000 with string lengths of 15, 25, 35 characters
+- **Top Performers**: 
+  - **CharArray**: 294 ns/op (N=100), 34,809 ns/op (N=10,000) - Fastest pure-Java approach
+  - **StringBuilderWithCapacity**: 381 ns/op (N=100), 40,456 ns/op (N=10,000) - Practical choice with zero reallocations
+  - **String.join()**: 465 ns/op (N=100), 49,853 ns/op (N=10,000) - Most idiomatic Java 8+
+- **Key Finding**: Naive approaches (`+`, `.concat()`, `.format()`) show **1000x+ degradation** at scale (N=10,000)
+
+See [concat/README.md](concat/README.md) for detailed information.
