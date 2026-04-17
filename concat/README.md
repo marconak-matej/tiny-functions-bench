@@ -66,10 +66,10 @@ The benchmarks are configured with the following parameters:
 
 | Implementation | Mode | Cnt | Score | Error | Units |
 |---|---|---|---|---|---|
-| stringBuilderWithCapacity | avgt | 10 | **381.161** 🥇 | ± 2.456 | ns/op |
 | charArray | avgt | 10 | **294.428** 🥇 | ± 2.716 | ns/op |
-| stringBuilder | avgt | 10 | **466.217** 🥉 | ± 1.995 | ns/op |
-| stringJoin | avgt | 10 | 465.268 | ± 7.290 | ns/op |
+| stringBuilderWithCapacity | avgt | 10 | **381.161** 🥈 | ± 2.456 | ns/op |
+| stringJoin | avgt | 10 | **465.268** 🥉 | ± 7.290 | ns/op |
+| stringBuilder | avgt | 10 | 466.217 | ± 1.995 | ns/op |
 | stringBuffer | avgt | 10 | 469.387 | ± 2.632 | ns/op |
 | stream | avgt | 10 | 560.881 | ± 3.409 | ns/op |
 | byteBuffer | avgt | 10 | 668.389 | ± 4.204 | ns/op |
@@ -84,10 +84,10 @@ The benchmarks are configured with the following parameters:
 |---|---|---|---|---|---|
 | charArray | avgt | 10 | **362.718** 🥇 | ± 2.114 | ns/op |
 | stringBuilderWithCapacity | avgt | 10 | **422.179** 🥈 | ± 15.590 | ns/op |
-| stringBuilder | avgt | 10 | **557.633** 🥉 | ± 2.583 | ns/op |
-| stringJoin | avgt | 10 | 467.290 | ± 10.476 | ns/op |
-| stringBuffer | avgt | 10 | 556.504 | ± 4.508 | ns/op |
+| stringJoin | avgt | 10 | **467.290** 🥉 | ± 10.476 | ns/op |
 | stream | avgt | 10 | 516.382 | ± 17.651 | ns/op |
+| stringBuffer | avgt | 10 | 556.504 | ± 4.508 | ns/op |
+| stringBuilder | avgt | 10 | 557.633 | ± 2.583 | ns/op |
 | byteBuffer | avgt | 10 | 747.047 | ± 2.514 | ns/op |
 | plusOperator | avgt | 10 | 3,342.435 | ± 19.346 | ns/op |
 | stringConcatMethod | avgt | 10 | 3,379.543 | ± 15.353 | ns/op |
@@ -101,9 +101,9 @@ The benchmarks are configured with the following parameters:
 | charArray | avgt | 10 | **422.629** 🥇 | ± 4.341 | ns/op |
 | stringBuilderWithCapacity | avgt | 10 | **456.140** 🥈 | ± 1.653 | ns/op |
 | stringJoin | avgt | 10 | **465.093** 🥉 | ± 3.448 | ns/op |
+| stream | avgt | 10 | 568.714 | ± 1.703 | ns/op |
 | stringBuilder | avgt | 10 | 583.434 | ± 3.693 | ns/op |
 | stringBuffer | avgt | 10 | 600.495 | ± 5.448 | ns/op |
-| stream | avgt | 10 | 568.714 | ± 1.703 | ns/op |
 | byteBuffer | avgt | 10 | 942.247 | ± 19.646 | ns/op |
 | plusOperator | avgt | 10 | 4,625.077 | ± 16.089 | ns/op |
 | stringConcatMethod | avgt | 10 | 4,647.820 | ± 11.081 | ns/op |
@@ -115,48 +115,48 @@ The benchmarks are configured with the following parameters:
 | Implementation | Mode | Cnt | Score | Error | Units |
 |---|---|---|---|---|---|
 | charArray | avgt | 10 | **3,398.597** 🥇 | ± 26.396 | ns/op |
-| stringBuilderWithCapacity | avgt | 10 | **4,119.842** 🥈 | ± 75.527 | ns/op |
+| stream | avgt | 10 | **3,902.709** 🥈 | ± 49.309 | ns/op |
 | stringBuilder | avgt | 10 | **3,981.502** 🥉 | ± 80.743 | ns/op |
-| stringJoin | avgt | 10 | 4,342.818 | ± 44.734 | ns/op |
 | stringBuffer | avgt | 10 | 4,005.141 | ± 56.518 | ns/op |
-| stream | avgt | 10 | 3,902.709 | ± 49.309 | ns/op |
+| stringBuilderWithCapacity | avgt | 10 | 4,119.842 | ± 75.527 | ns/op |
+| stringJoin | avgt | 10 | 4,342.818 | ± 44.734 | ns/op |
 | byteBuffer | avgt | 10 | 7,745.604 | ± 40.656 | ns/op |
+| parallelStream | avgt | 10 | 25,179.881 | ± 296.166 | ns/op |
 | plusOperator | avgt | 10 | 240,148.120 | ± 397.490 | ns/op |
 | stringConcatMethod | avgt | 10 | 241,409.098 | ± 462.143 | ns/op |
 | stringFormat | avgt | 10 | 963,985.031 | ± 3,698.139 | ns/op |
-| parallelStream | avgt | 10 | 25,179.881 | ± 296.166 | ns/op |
 
 ### Medium Dataset (N=1,000, 25 characters)
 
 | Implementation | Mode | Cnt | Score | Error | Units |
 |---|---|---|---|---|---|
 | charArray | avgt | 10 | **4,066.941** 🥇 | ± 7.885 | ns/op |
-| stringBuilderWithCapacity | avgt | 10 | **4,644.215** 🥈 | ± 26.558 | ns/op |
-| stringJoin | avgt | 10 | **4,500.989** 🥉 | ± 42.020 | ns/op |
+| stringJoin | avgt | 10 | **4,500.989** 🥈 | ± 42.020 | ns/op |
+| stringBuilderWithCapacity | avgt | 10 | **4,644.215** 🥉 | ± 26.558 | ns/op |
+| stream | avgt | 10 | 5,216.079 | ± 17.457 | ns/op |
 | stringBuilder | avgt | 10 | 5,337.724 | ± 30.031 | ns/op |
 | stringBuffer | avgt | 10 | 5,390.388 | ± 136.578 | ns/op |
-| stream | avgt | 10 | 5,216.079 | ± 17.457 | ns/op |
 | byteBuffer | avgt | 10 | 8,433.636 | ± 109.589 | ns/op |
+| parallelStream | avgt | 10 | 27,084.508 | ± 247.924 | ns/op |
 | plusOperator | avgt | 10 | 502,761.647 | ± 1,054.187 | ns/op |
 | stringConcatMethod | avgt | 10 | 504,856.480 | ± 1,474.531 | ns/op |
 | stringFormat | avgt | 10 | 1,637,096.136 | ± 4,823.318 | ns/op |
-| parallelStream | avgt | 10 | 27,084.508 | ± 247.924 | ns/op |
 
 ### Medium Dataset (N=1,000, 35 characters)
 
 | Implementation | Mode | Cnt | Score | Error | Units |
 |---|---|---|---|---|---|
-| charArray | avgt | 10 | **4,966.330** 🥇 | ± 112.556 | ns/op |
+| stringJoin | avgt | 10 | **4,807.510** 🥇 | ± 38.540 | ns/op |
 | stringBuilderWithCapacity | avgt | 10 | **4,851.801** 🥈 | ± 46.353 | ns/op |
-| stringJoin | avgt | 10 | **4,807.510** 🥉 | ± 38.540 | ns/op |
-| stringBuilder | avgt | 10 | 5,778.658 | ± 12.183 | ns/op |
-| stringBuffer | avgt | 10 | 5,770.747 | ± 11.933 | ns/op |
+| charArray | avgt | 10 | **4,966.330** 🥉 | ± 112.556 | ns/op |
 | stream | avgt | 10 | 5,590.471 | ± 29.339 | ns/op |
+| stringBuffer | avgt | 10 | 5,770.747 | ± 11.933 | ns/op |
+| stringBuilder | avgt | 10 | 5,778.658 | ± 12.183 | ns/op |
 | byteBuffer | avgt | 10 | 10,307.273 | ± 516.542 | ns/op |
+| parallelStream | avgt | 10 | 27,816.407 | ± 166.301 | ns/op |
 | plusOperator | avgt | 10 | 738,579.702 | ± 6,632.807 | ns/op |
 | stringConcatMethod | avgt | 10 | 739,985.018 | ± 1,094.029 | ns/op |
 | stringFormat | avgt | 10 | 2,219,914.057 | ± 4,107.984 | ns/op |
-| parallelStream | avgt | 10 | 27,816.407 | ± 166.301 | ns/op |
 
 ### Large Dataset (N=10,000, 15 characters)
 
@@ -164,10 +164,10 @@ The benchmarks are configured with the following parameters:
 |---|---|---|---|---|---|
 | charArray | avgt | 10 | **34,809.292** 🥇 | ± 529.953 | ns/op |
 | stringBuilderWithCapacity | avgt | 10 | **40,456.988** 🥈 | ± 274.334 | ns/op |
-| stringBuilder | avgt | 10 | **44,254.565** 🥉 | ± 2,324.750 | ns/op |
-| stringBuffer | avgt | 10 | 44,053.521 | ± 1,330.776 | ns/op |
-| stringJoin | avgt | 10 | 49,853.242 | ± 533.874 | ns/op |
+| stringBuffer | avgt | 10 | **44,053.521** 🥉 | ± 1,330.776 | ns/op |
+| stringBuilder | avgt | 10 | 44,254.565 | ± 2,324.750 | ns/op |
 | stream | avgt | 10 | 49,173.896 | ± 13,895.388 | ns/op |
+| stringJoin | avgt | 10 | 49,853.242 | ± 533.874 | ns/op |
 | byteBuffer | avgt | 10 | 65,156.587 | ± 2,729.976 | ns/op |
 | parallelStream | avgt | 10 | 76,372.718 | ± 12,735.346 | ns/op |
 | stringConcatMethod | avgt | 10 | 28,528,256.942 | ± 45,521.473 | ns/op |
@@ -182,8 +182,8 @@ The benchmarks are configured with the following parameters:
 | stringBuilderWithCapacity | avgt | 10 | **44,048.717** 🥈 | ± 326.371 | ns/op |
 | stringBuilder | avgt | 10 | **46,169.856** 🥉 | ± 855.980 | ns/op |
 | stringBuffer | avgt | 10 | 47,415.531 | ± 4,677.848 | ns/op |
-| stringJoin | avgt | 10 | 52,812.855 | ± 655.896 | ns/op |
 | stream | avgt | 10 | 51,523.575 | ± 13,677.787 | ns/op |
+| stringJoin | avgt | 10 | 52,812.855 | ± 655.896 | ns/op |
 | byteBuffer | avgt | 10 | 74,024.279 | ± 401.554 | ns/op |
 | parallelStream | avgt | 10 | 78,817.865 | ± 4,364.211 | ns/op |
 | stringConcatMethod | avgt | 10 | 46,901,972.164 | ± 85,725.891 | ns/op |
@@ -194,11 +194,11 @@ The benchmarks are configured with the following parameters:
 
 | Implementation | Mode | Cnt | Score | Error | Units |
 |---|---|---|---|---|---|
-| charArray | avgt | 10 | **51,184.982** 🥇 | ± 240.920 | ns/op |
-| stringBuilderWithCapacity | avgt | 10 | **50,428.369** 🥈 | ± 1,129.135 | ns/op |
-| stringBuilder | avgt | 10 | **62,887.377** 🥉 | ± 2,912.387 | ns/op |
+| stringBuilderWithCapacity | avgt | 10 | **50,428.369** 🥇 | ± 1,129.135 | ns/op |
+| charArray | avgt | 10 | **51,184.982** 🥈 | ± 240.920 | ns/op |
+| stringJoin | avgt | 10 | **57,113.565** 🥉 | ± 325.792 | ns/op |
 | stringBuffer | avgt | 10 | 62,449.060 | ± 1,988.784 | ns/op |
-| stringJoin | avgt | 10 | 57,113.565 | ± 325.792 | ns/op |
+| stringBuilder | avgt | 10 | 62,887.377 | ± 2,912.387 | ns/op |
 | stream | avgt | 10 | 67,538.947 | ± 14,271.150 | ns/op |
 | byteBuffer | avgt | 10 | 92,826.211 | ± 813.236 | ns/op |
 | parallelStream | avgt | 10 | 122,816.546 | ± 505.674 | ns/op |
@@ -223,19 +223,28 @@ The benchmarks are configured with the following parameters:
 ### Performance Champions:
 
 #### Overall Best: **CharArray**
-- N=100 (15 char): **294 ns/op** 🥇
-- N=1,000 (15 char): **3,398 ns/op** 🥇  
-- N=10,000 (15 char): **34,809 ns/op** 🥇
+- N=100 (15 char): **294.428 ns/op** 🥇
+- N=100 (25 char): **362.718 ns/op** 🥇
+- N=100 (35 char): **422.629 ns/op** 🥇
+- N=1,000 (15 char): **3,398.597 ns/op** 🥇  
+- N=1,000 (25 char): **4,066.941 ns/op** 🥇
+- N=10,000 (15 char): **34,809.292 ns/op** 🥇
+- N=10,000 (25 char): **43,412.014 ns/op** 🥇
 
 #### Runner-Up: **StringBuilderWithCapacity**
 - Practical choice when CharArray is too verbose
 - Zero reallocation strategy matches CharArray performance
-- N=10,000 (15 char): **40,456 ns/op** (16% slower, much cleaner code)
+- N=100 (15 char): **381.161 ns/op** 🥈 (30% slower)
+- N=1,000 (15 char): **4,119.842 ns/op** 🥉
+- N=10,000 (15 char): **40,456.988 ns/op** 🥈 (16% slower than charArray)
+- N=10,000 (35 char): **50,428.369 ns/op** 🥇 (slightly faster than charArray at this size!)
 
 #### Most Idiomatic: **String.join()**
 - Readable, maintainable, production-friendly
-- Performance: 5-10% overhead vs direct StringBuilder
-- N=1,000 (15 char): **4,342 ns/op** (only 2.8% slower than charArray)
+- N=100 (35 char): **465.093 ns/op** 🥉
+- N=1,000 (25 char): **4,500.989 ns/op** 🥈
+- N=1,000 (35 char): **4,807.510 ns/op** 🥇 (best at this configuration!)
+- N=10,000 (35 char): **57,113.565 ns/op** 🥉
 
 ### Recommendation Matrix:
 
