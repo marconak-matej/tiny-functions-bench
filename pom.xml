@@ -17,6 +17,7 @@
         <module>vowels</module>
         <module>is-palindrome</module>
         <module>concat</module>
+        <module>format</module>
     </modules>
 
     <properties>
