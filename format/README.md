@@ -1,6 +1,6 @@
 # Java Order Summary Formatting Benchmarks
 
-A comprehensive benchmark suite exploring **8 different approaches** to formatting order summary strings in Java, comparing different string formatting techniques with emphasis on **performance, thread-safety, and readability**.
+A benchmark suite exploring **8 different approaches** to formatting order summary strings in Java, comparing different string formatting techniques with emphasis on **performance, thread-safety and readability**.
 
 ## Problem Statement
 
@@ -98,18 +98,6 @@ Methods that use full formatting framework:
 - Format methods: ±4-32 ns error margin (up to 6x higher variance)
 - Highest variance: `MessageFormat` at ±32.6 ns (on 1000.5 amount)
 
-## Thread Safety
-
-All implementations are **thread-safe**:
-- **ConcatenationImpl**: Uses `String.format()` (immutable, thread-safe)
-- **StringBuilderImpl**: Uses `StringBuilder` + `String.format()` (local instances only)
-- **StringConcatWithDecimalFormatImpl**: Uses `ThreadLocal<DecimalFormat>` (thread-isolated)
-- **StringConcatWithNumberFormatImpl**: Uses `ThreadLocal<NumberFormat>` (thread-isolated)
-- **FormattedStringImpl**: Immutable `String.formatted()` (thread-safe)
-- **StringFormatImpl**: Uses `String.format()` (immutable, thread-safe)
-- **FormatterImpl**: Creates new `Formatter` on each call (no shared state)
-- **MessageFormatImpl**: Uses `ThreadLocal<MessageFormat>` (thread-isolated)
-
 ## Results
 
 All benchmarks measured in **nanoseconds (ns/op)** using JMH with the following parameters:
@@ -132,7 +120,7 @@ All benchmarks measured in **nanoseconds (ns/op)** using JMH with the following 
 | formattedString | avgt | 10 | 256.720 | ± 4.159 | ns/op |
 | stringFormat | avgt | 10 | 268.588 | ± 4.844 | ns/op |
 
-**Key Insight:** `StringBuilder` dominates at ~100 ns/op; format-specific methods (`String.format()`, `Formatter`, `MessageFormat`) are 2.4-2.7x slower.
+**Key Insight:** `Concatenation` and `StringBuilder` dominates at ~100 ns/op; format-specific methods (`String.format()`, `Formatter`, `MessageFormat`) are 2.4-2.7x slower.
 
 ### Amount Parameter: `1000.5` (Larger Magnitude)
 
