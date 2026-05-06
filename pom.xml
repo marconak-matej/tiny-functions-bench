@@ -18,6 +18,7 @@
         <module>is-palindrome</module>
         <module>concat</module>
         <module>format</module>
+        <module>looping</module>
     </modules>
 
     <properties>

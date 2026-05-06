@@ -59,3 +59,17 @@ Benchmarks different approaches to concatenate strings in Java.
 - **Key Finding**: Naive approaches (`+`, `.concat()`, `.format()`) show **1000x+ degradation** at scale (N=10,000)
 
 See [concat/README.md](concat/README.md) for detailed information.
+
+### looping
+
+Benchmarks different approaches to iterate over collections in Java.
+
+- **Implementations**: 9 different approaches (indexed for loop, enhanced for loop, Iterator, ListIterator, forEach, Stream, parallelStream, array conversion)
+- **Test Configurations**: N = 1,000, 10,000, 100,000 with ArrayList and LinkedList
+- **Top Performers**:
+  - **ArrayList**: Indexed for loop (263 ns/op @ N=1k, 31k ns/op @ N=100k) - fastest with O(1) random access
+  - **LinkedList**: Enhanced for loop / Iterator (1.5ms @ N=1k, 159μs @ N=100k) - avoids O(n²) catastrophe of indexed access
+- **Key Finding**: Indexed for loop on LinkedList is catastrophically slow (3.8 seconds @ N=100k = O(n²) disaster); always use iterators for LinkedList
+- **Key Finding**: parallelStream is 58x slower than sequential at small N due to fork-join overhead
+
+See [looping/README.md](looping/README.md) for detailed information.
