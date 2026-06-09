@@ -19,6 +19,7 @@
         <module>concat</module>
         <module>format</module>
         <module>looping</module>
+        <module>uuid</module>
     </modules>
 
     <properties>
@@ -26,6 +27,8 @@
         <maven.compiler.source>25</maven.compiler.source>
         <maven.compiler.target>25</maven.compiler.target>
         <jmh.version>1.37</jmh.version>
+        <uuid-creator.version>6.1.1</uuid-creator.version>
+        <junit.version>6.0.3</junit.version>
         <junit.version>6.1.0</junit.version>
 
         <!-- plugins -->
@@ -48,6 +51,11 @@
                 <artifactId>jmh-generator-annprocess</artifactId>
                 <version>${jmh.version}</version>
                 <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.github.f4b6a3</groupId>
+                <artifactId>uuid-creator</artifactId>
+                <version>${uuid-creator.version}</version>
             </dependency>
 
             <!-- Test Dependencies -->

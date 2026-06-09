@@ -73,3 +73,18 @@ Benchmarks different approaches to iterate over collections in Java.
 - **Key Finding**: parallelStream is 58x slower than sequential at small N due to fork-join overhead
 
 See [looping/README.md](looping/README.md) for detailed information.
+
+### uuid
+
+Benchmarks different approaches to generate UUIDs in Java.
+
+- **Implementations**: 7 different UUID versions (v1 Time-based, v2 DCE Security, v3 Name-based MD5, v4 Random-based, v5 Name-based SHA1, v6 Time-ordered, v7 Time-ordered Epoch)
+- **Library**: [uuid-creator](https://mvnrepository.com/artifact/com.github.f4b6a3/uuid-creator) v6.1.1
+- **Test Cases**: UUID validity verification, deterministic vs random generation verification
+- **Expected Performance Characteristics**:
+  - **Deterministic UUIDs** (v3, v5): Slower due to hashing operations (MD5, SHA1)
+  - **Random-based** (v4): Fast, uses random generation
+  - **Time-based** (v1, v6, v7): Fast, use timestamp-based generation
+  - **DCE Security** (v2): Similar to time-based with security features
+
+See [uuid/README.md](uuid/README.md) for detailed information.
