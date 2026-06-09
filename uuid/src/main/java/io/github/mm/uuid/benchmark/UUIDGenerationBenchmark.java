@@ -17,12 +17,12 @@ import org.openjdk.jmh.runner.options.TimeValue;
  *   java -jar target/benchmarks.jar
  *
  */
-@BenchmarkMode(Mode.Throughput)
+@BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
-@Fork(value = 2, warmups = 1)
-@Warmup(iterations = 5, time = 1)
+@Fork(value = 5, warmups = 1)
+@Warmup(iterations = 10, time = 1)
 @Measurement(iterations = 10, time = 1)
-@State(Scope.Thread)
+@State(Scope.Benchmark)
 public class UUIDGenerationBenchmark {
 
     // Pre-created strategy instances
