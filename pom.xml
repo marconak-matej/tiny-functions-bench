@@ -20,6 +20,7 @@
         <module>format</module>
         <module>looping</module>
         <module>uuid</module>
+        <module>reverse</module>
     </modules>
 
     <properties>

@@ -88,3 +88,13 @@ Benchmarks different approaches to generate UUIDs in Java.
   - **DCE Security** (v2): Similar to time-based with security features
 
 See [uuid/README.md](uuid/README.md) for detailed information.
+
+### reverse
+
+Benchmarks different approaches to reverse a string in Java.
+
+- **Implementations**: 8 different approaches (StringBuilder, TwoPointer, Loop, Recursion, Stream codePoints, Stream index, Stack, Collections.reverse)
+- **Test Cases**: Empty string, single character, short/medium strings, palindrome, Unicode, null input
+- **Dataset**: 3 string sizes (5, 43, 123 chars) benchmarked per strategy
+
+See [reverse/README.md](reverse/README.md) for detailed information.
