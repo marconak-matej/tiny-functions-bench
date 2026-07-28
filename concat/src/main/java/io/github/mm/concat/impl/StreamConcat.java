@@ -18,4 +18,3 @@ public class StreamConcat implements ConcatArray {
         return items.stream().collect(Collectors.joining());
     }
 }
-

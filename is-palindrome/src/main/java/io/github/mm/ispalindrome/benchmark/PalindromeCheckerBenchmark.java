@@ -78,8 +78,7 @@ public class PalindromeCheckerBenchmark {
         }
         String half = sb.toString();
         String firstHalf = half.substring(0, halfLength);
-        return firstHalf + (length % 2 == 1 ? half.charAt(halfLength) : "")
-                + new StringBuilder(firstHalf).reverse();
+        return firstHalf + (length % 2 == 1 ? half.charAt(halfLength) : "") + new StringBuilder(firstHalf).reverse();
     }
 
     private String generateNonPalindrome(int length) {

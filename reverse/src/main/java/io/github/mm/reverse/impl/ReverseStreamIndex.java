@@ -10,10 +10,7 @@ public class ReverseStreamIndex implements ReverseStrategy {
         if (input == null) return null;
         return IntStream.range(0, input.length())
                 .mapToObj(i -> String.valueOf(input.charAt(input.length() - 1 - i)))
-                .collect(
-                        StringBuilder::new,
-                        StringBuilder::append,
-                        StringBuilder::append)
+                .collect(StringBuilder::new, StringBuilder::append, StringBuilder::append)
                 .toString();
     }
 }

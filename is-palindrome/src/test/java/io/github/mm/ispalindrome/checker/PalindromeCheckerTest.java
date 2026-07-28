@@ -19,8 +19,7 @@ class PalindromeCheckerTest {
             new StreamPalindromeChecker(),
             new CharArrayPalindromeChecker());
 
-    private static final List<PalindromeChecker> regexCheckers =
-            List.of(new RegexPalindromeChecker());
+    private static final List<PalindromeChecker> regexCheckers = List.of(new RegexPalindromeChecker());
 
     static Stream<Arguments> palindromeCheckerProvider() {
         return checkers.stream().map(Arguments::of);

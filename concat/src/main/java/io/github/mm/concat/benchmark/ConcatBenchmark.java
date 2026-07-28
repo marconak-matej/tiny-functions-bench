@@ -153,4 +153,3 @@ public class ConcatBenchmark {
         new Runner(opt).run();
     }
 }
-

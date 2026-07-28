@@ -5,9 +5,9 @@ import java.util.List;
 
 /**
  * String concatenation using StringBuilder with pre-allocated capacity.
- * 
+ *
  * Complexity: O(n) with zero internal reallocations - no char[] doubling at all
- * Use case: When the input size is known (or estimable) before the loop. 
+ * Use case: When the input size is known (or estimable) before the loop.
  * Best-in-class among StringBuilder-based approaches.
  */
 public class StringBuilderWithCapacityConcat implements ConcatArray {
@@ -26,4 +26,3 @@ public class StringBuilderWithCapacityConcat implements ConcatArray {
         return sb.toString();
     }
 }
-

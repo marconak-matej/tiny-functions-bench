@@ -5,9 +5,9 @@ import java.util.List;
 
 /**
  * String concatenation using the legacy StringBuffer (thread-safe, synchronized).
- * 
+ *
  * Complexity: O(n) - mutable internal buffer, but synchronization adds overhead per append()
- * Use case: Only when the same buffer is genuinely shared and mutated across multiple 
+ * Use case: Only when the same buffer is genuinely shared and mutated across multiple
  * threads simultaneously. Prefer StringBuilder in all single-threaded contexts.
  */
 public class StringBufferConcat implements ConcatArray {
@@ -21,4 +21,3 @@ public class StringBufferConcat implements ConcatArray {
         return sb.toString();
     }
 }
-

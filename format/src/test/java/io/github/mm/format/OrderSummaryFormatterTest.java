@@ -3,12 +3,12 @@ package io.github.mm.format;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import io.github.mm.format.impl.ConcatenationImpl;
+import io.github.mm.format.impl.ConcatenationWithDecimalFormatImpl;
+import io.github.mm.format.impl.ConcatenationWithNumberFormatImpl;
 import io.github.mm.format.impl.FormattedStringImpl;
 import io.github.mm.format.impl.FormatterImpl;
 import io.github.mm.format.impl.MessageFormatImpl;
 import io.github.mm.format.impl.StringBuilderImpl;
-import io.github.mm.format.impl.ConcatenationWithDecimalFormatImpl;
-import io.github.mm.format.impl.ConcatenationWithNumberFormatImpl;
 import io.github.mm.format.impl.StringFormatImpl;
 import java.util.stream.Stream;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -100,4 +100,3 @@ class OrderSummaryFormatterTest {
         assertEquals("Order ORD-010 for Grace: $-50.50", result);
     }
 }
-

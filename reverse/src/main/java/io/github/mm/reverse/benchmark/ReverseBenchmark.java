@@ -44,7 +44,8 @@ public class ReverseBenchmark {
 
         shortString = "hello";
         mediumString = "The quick brown fox jumps over the lazy dog";
-        longString = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+        longString =
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
     }
 
     @Benchmark

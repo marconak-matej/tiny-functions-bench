@@ -10,13 +10,13 @@ public class ConcatenationWithNumberFormatImpl implements OrderSummaryFormatter 
         NumberFormat nf = NumberFormat.getInstance(Locale.US);
         nf.setMinimumFractionDigits(2);
         nf.setMaximumFractionDigits(2);
-        nf.setGroupingUsed(false);  // Disable thousand separators (1,000.00 → 1000.00)
+        nf.setGroupingUsed(false); // Disable thousand separators (1,000.00 → 1000.00)
         return nf;
     });
 
     @Override
     public String buildOrderSummary(String orderId, String customer, double amount) {
-        return "Order " + orderId + " for " + customer + ": $" + NUMBER_FORMAT.get().format(amount);
+        return "Order " + orderId + " for " + customer + ": $"
+                + NUMBER_FORMAT.get().format(amount);
     }
 }
-

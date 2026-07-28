@@ -5,9 +5,9 @@ import java.util.List;
 
 /**
  * String concatenation using StringBuilder (standard, non-synchronized).
- * 
+ *
  * Complexity: O(n) amortized - internal char[] doubles when capacity is exceeded
- * Use case: The default choice for any string concatenation in a loop. 
+ * Use case: The default choice for any string concatenation in a loop.
  * Preferred over StringBuffer in all single-threaded scenarios.
  */
 public class StringBuilderConcat implements ConcatArray {
@@ -21,4 +21,3 @@ public class StringBuilderConcat implements ConcatArray {
         return sb.toString();
     }
 }
-

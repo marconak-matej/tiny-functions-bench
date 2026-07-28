@@ -17,4 +17,3 @@ public interface OrderSummaryFormatter {
      */
     String buildOrderSummary(String orderId, String customer, double amount);
 }
-

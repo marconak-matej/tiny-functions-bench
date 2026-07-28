@@ -14,4 +14,3 @@ public class FormatterImpl implements OrderSummaryFormatter {
         return sb.toString();
     }
 }
-

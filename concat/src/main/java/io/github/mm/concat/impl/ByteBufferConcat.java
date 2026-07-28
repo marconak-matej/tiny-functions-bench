@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * String concatenation using ByteBuffer / NIO.
- * 
+ *
  * Complexity: O(n) - but includes encoding/decoding overhead per string
  * Use case: Suited for pipelines that already deal in bytes (network I/O, file channels).
  * The charset encoding round-trip makes this slower than char[] for pure string work.
@@ -32,4 +32,3 @@ public class ByteBufferConcat implements ConcatArray {
         return new String(buffer.array(), StandardCharsets.UTF_8);
     }
 }
-

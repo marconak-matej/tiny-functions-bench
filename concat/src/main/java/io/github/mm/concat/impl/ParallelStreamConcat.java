@@ -6,10 +6,10 @@ import java.util.stream.Collectors;
 
 /**
  * String concatenation using Parallel Stream with Collectors.joining().
- * 
- * Complexity: O(n/k) where k = number of cores - but thread overhead and final merge 
+ *
+ * Complexity: O(n/k) where k = number of cores - but thread overhead and final merge
  * cost dominate for small inputs
- * Use case: Only beneficial for very large datasets (10,000+ strings). 
+ * Use case: Only beneficial for very large datasets (10,000+ strings).
  * Parallel overhead makes this slower than StringBuilder for typical inputs.
  */
 public class ParallelStreamConcat implements ConcatArray {
@@ -19,4 +19,3 @@ public class ParallelStreamConcat implements ConcatArray {
         return items.parallelStream().collect(Collectors.joining());
     }
 }
-

@@ -20,4 +20,3 @@ public class StringConcatMethodConcat implements ConcatArray {
         return result;
     }
 }
-

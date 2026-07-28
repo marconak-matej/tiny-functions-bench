@@ -16,4 +16,3 @@ public class StringBuilderImpl implements OrderSummaryFormatter {
                 .toString();
     }
 }
-

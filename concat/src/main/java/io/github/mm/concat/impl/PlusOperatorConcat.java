@@ -20,4 +20,3 @@ public class PlusOperatorConcat implements ConcatArray {
         return result;
     }
 }
-

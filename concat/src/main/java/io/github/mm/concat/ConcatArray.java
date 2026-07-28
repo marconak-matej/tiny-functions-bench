@@ -17,4 +17,3 @@ public interface ConcatArray {
      */
     String concat(List<String> items);
 }
-

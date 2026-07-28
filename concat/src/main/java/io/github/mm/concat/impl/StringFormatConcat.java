@@ -5,9 +5,9 @@ import java.util.List;
 
 /**
  * String concatenation using String.format() inside a loop.
- * 
+ *
  * Complexity: O(n²) + format-string parsing overhead on every call
- * Use case: Never use for building strings in a loop. String.format() is intended for 
+ * Use case: Never use for building strings in a loop. String.format() is intended for
  * one-shot formatting of a final value, not for accumulation.
  */
 public class StringFormatConcat implements ConcatArray {
@@ -21,4 +21,3 @@ public class StringFormatConcat implements ConcatArray {
         return result;
     }
 }
-

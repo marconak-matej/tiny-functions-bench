@@ -9,4 +9,3 @@ public class ConcatenationImpl implements OrderSummaryFormatter {
         return "Order " + orderId + " for " + customer + ": $" + String.format("%.2f", amount);
     }
 }
-

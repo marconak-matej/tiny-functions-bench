@@ -69,12 +69,14 @@ public class OrderSummaryBenchmark {
 
     @Benchmark
     public void stringConcatWithDecimalFormat(Blackhole bh) {
-        bh.consume(concatenationWithDecimalFormatImpl.buildOrderSummary("ORD-001", "John Doe", Double.parseDouble(amount)));
+        bh.consume(concatenationWithDecimalFormatImpl.buildOrderSummary(
+                "ORD-001", "John Doe", Double.parseDouble(amount)));
     }
 
     @Benchmark
     public void stringConcatWithNumberFormat(Blackhole bh) {
-        bh.consume(concatenationWithNumberFormatImpl.buildOrderSummary("ORD-001", "John Doe", Double.parseDouble(amount)));
+        bh.consume(
+                concatenationWithNumberFormatImpl.buildOrderSummary("ORD-001", "John Doe", Double.parseDouble(amount)));
     }
 
     @Benchmark
@@ -107,4 +109,3 @@ public class OrderSummaryBenchmark {
         new Runner(opt).run();
     }
 }
-

@@ -10,7 +10,7 @@ public class ConcatenationWithDecimalFormatImpl implements OrderSummaryFormatter
 
     @Override
     public String buildOrderSummary(String orderId, String customer, double amount) {
-        return "Order " + orderId + " for " + customer + ": $" + DECIMAL_FORMAT.get().format(amount);
+        return "Order " + orderId + " for " + customer + ": $"
+                + DECIMAL_FORMAT.get().format(amount);
     }
 }
-

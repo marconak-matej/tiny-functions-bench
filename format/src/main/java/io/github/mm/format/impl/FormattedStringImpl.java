@@ -9,4 +9,3 @@ public class FormattedStringImpl implements OrderSummaryFormatter {
         return "Order %s for %s: $%.2f".formatted(orderId, customer, amount);
     }
 }
-
